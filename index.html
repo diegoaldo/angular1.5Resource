@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="angular.js@1.5.5" data-semver="1.5.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script data-require="angular.js@1.5.5" data-semver="1.5.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body ng-app="training">
+  <div ng-controller="MainCtrl as vm">
+    <table style="width:100%">
+      <tr>
+        <td>Flower</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr data-ng-repeat="flower in vm.flowers">
+        <td valign="top" style="width:30%">
+          {{flower.Name}}
+        </td>
+        <td style="width:70%">
+          <textarea style="width:100%" rows="4" ng-model="flower.Description"></textarea>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- Main Module -->
+  <script src="training.js"></script>
+  <!-- Services -->
+  <script src="services.js"></script>
+  <!-- Configuration Constants -->
+  <script src="appSettings.js"></script>
+  <!-- Controlller -->
+  <script src="controller.js"></script>
+
+</body>
+
+</html>
